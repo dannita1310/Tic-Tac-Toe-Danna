@@ -4,7 +4,7 @@ let tab = document.getElementById("tablero");
 const vari = [
   ["1", "2", "3"],
   ["4", " ", "6"],
-  ["7", "8", "9"],
+  ["7", "8", "10"],
 ];
 
 for (let i = 0; i < 9; i++) {
