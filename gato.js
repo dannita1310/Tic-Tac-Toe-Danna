@@ -3,9 +3,10 @@ let tab = document.getElementById("tablero");
 let Btn = document.getElementById("restartBtn");
 let gana = document.getElementById("gana");
 let turnoX = document.getElementById("menX");
+let jugadorx = "X";
 let computadora = "O";
 let juegoTerminado = false;
-
+turnoX.textContent = jugadorx;
 const vari = [
   ["1", "2", "3"],
   ["4", " ", "6"],
@@ -17,6 +18,7 @@ function turnoO() {
   let numero = Math.floor(Math.random() * camposVacios.length);
   if (camposVacios.length > 0) {
     camposVacios[numero].innerHTML = computadora;
+    turnoX.textContent = jugadorx;
   }
 }
 
@@ -26,8 +28,8 @@ function filtroVacios(campo) {
 
 for (let i = 0; i < 9; i++) {
   cam[i].addEventListener("click", function () {
-    if(juegoTerminado){
-      return
+    if (juegoTerminado) {
+      return;
     }
     if (cam[i].textContent === "") {
       cam[i].innerHTML = "X";
@@ -35,6 +37,7 @@ for (let i = 0; i < 9; i++) {
         gana.innerHTML = `${cam[i].textContent} ha ganado`;
         juegoTerminado = true;
       } else {
+        turnoX.textContent = computadora;
         turnoO();
         if (Winner(computadora)) {
           gana.innerHTML = `${computadora} ha ganado`;
