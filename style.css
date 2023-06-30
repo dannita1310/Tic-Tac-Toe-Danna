@@ -16,48 +16,6 @@ h1 {
   font-size: 54px;
   text-transform: uppercase;
 }
-.dark-theme {
-  background-image: url("https://cdn.suwalls.com/wallpapers/abstract/dark-blue-blur-29233-1920x1080.jpg");
-  --primary-color: #000000;
-  --secondary-color: #0d1117;
-  --tertiary-color: #fff;
-  --fourth-color: #fff;
-  --fifth-color: #fff;
-  --sixth-color: #fff;
-}
-
-.toggle-btn {
-  position: absolute;
-  width: 4.8rem;
-  height: 2.4rem;
-  right: 2rem;
-  top: 2rem;
-  border: 0.2rem solid;
-  border-radius: 2rem;
-  border-color: var(--primary-color);
-  background: var(--primary-color);
-}
-
-.toggle-btn .inner-circle {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  left: 0.1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  background: var(--secondary-color);
-  transition: all 0.4s ease;
-}
-
-.toggle-btn.active {
-  background: var(--primary-color);
-  border-color: #0d1117;
-}
-
-.toggle-btn.active .circulo-interno {
-  margin-left: 50%;
-  background: #fff;
-}
 
 .container1 {
   padding: 40px;
@@ -66,7 +24,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("https://cdn.suwalls.com/wallpapers/abstract/colorful-blur-46218-1920x1080.jpg");
+  background-image: url("https://rare-gallery.com/uploads/posts/571725-blur-wallpaper.jpg");
 }
 
 #tablero {
@@ -101,8 +59,27 @@ button {
   font-size: 18px;
   transition: 200ms transform;
   font-weight: 600;
+  margin-left: 60px;
 }
 button:hover {
   cursor: pointer;
   transform: translateY(-2px);
+}
+
+#gana {
+  margin-left: 75px;
+}
+@media (min-width: 768px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
 }
