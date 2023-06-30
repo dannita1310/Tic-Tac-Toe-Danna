@@ -2,6 +2,7 @@ let cam = document.querySelectorAll(".box");
 let tab = document.getElementById("tablero");
 let Btn = document.getElementById("restartBtn");
 let gana = document.getElementById("gana");
+let turnoX = document.getElementById("menX");
 let computadora = "O";
 let juegoTerminado = false;
 
